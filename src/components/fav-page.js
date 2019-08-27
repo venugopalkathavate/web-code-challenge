@@ -1,18 +1,28 @@
 function renderFav() {
     const html = `
         <div class="content fav-page hide">
-            <div class="fav-search-field"></div>
+            <div class="fav-input-container"></div>
             <div class="results fav-items"></div>
         </div>
     `;
 
     $('body').append(html);
-    renderSearch('fav-search-field', onFavSearch);
+    renderSearch('fav-input-container', onFavSearch);
     renderFavItems();
 }
 
 function onFavSearch(e) {
-    console.log('Fav search', e.target.value);
+    const value = e.target.value;
+
+    if (value === '') {
+        favItems = [...tempItems];
+    } else {
+        favItems = favItems.filter(function(item) {
+            return item.title.includes(value);
+        });
+    }
+
+    renderFavItems();
 }
 
 function renderFavItems() {
@@ -20,7 +30,7 @@ function renderFavItems() {
         (favItems.map(function(item, index) {
             return renderResultsTemplate(item, false, index);
         })) : (
-            `<div>No favorites recipes</div>`
+            `<div class='no-results'>No favorite recipes</div>`
         );
     
     $('.fav-items').html(favItemsHtml);

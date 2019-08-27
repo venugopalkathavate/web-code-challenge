@@ -1,13 +1,13 @@
 function renderSearchPage() {
     const html = `
         <div class="content search-page">
-            <div class="search-field"></div>
+            <div class="search-input-container"></div>
             <div class="results search-results"></div>
         </div>
     `;    
 
     $('body').append(html);
-    renderSearch('search-field', onSearch);
+    renderSearch('search-input-container', onSearch);
     renderSearchResults();
 }
 
@@ -20,7 +20,7 @@ function renderSearchResults() {
         searchResults.map(function(result) {
             return renderResultsTemplate(result, true);
         })) : (
-            `<div>Please enter a recipe</div>`
+            `<div class='no-results'>No recipes found</div>`
         );
     
     $('.search-results').html(searchResultsHtml);
