@@ -7,7 +7,7 @@ function addToFav(item, addFav, index) {
 };
 
 function renderResultsTemplate(result, showAddToFav, index) {
-    const imageName = showAddToFav ? 'bookmark-regular.svg' : 'minus-circle-solid.svg';
+    const imageClass = showAddToFav ? 'bookmark-regular' : 'minus-circle-solid';
     const thumbnail = result.thumbnail 
         ? `<img src='${result.thumbnail}' alt='${result.title}'>`
         : `<img src='./../../images/no-image-available.png' alt='${result.title}'>`;
@@ -18,14 +18,14 @@ function renderResultsTemplate(result, showAddToFav, index) {
             <div class='recipe-details'>
                 <div><a href='${result.href}'>${result.title}</a></div>
                 <span>Ingredients: ${result.ingredients.split(',').length}</span>
-                <img src='./../../images/${imageName}' 
-                    alt='favorites' class='fav-icon'
+                <div class='fav-icon ${imageClass}'
+                    alt='favorites'
                     onclick='addToFav(
                         ${JSON.stringify(result)},
                         ${JSON.stringify(showAddToFav)},
                         ${JSON.stringify(index)}
                     )'
-                >
+                />
             </div>
         </div>
     `;

@@ -64,6 +64,7 @@ body {
 .recipe-details {
     padding: .5rem;
     position: relative;
+    line-height: 1.5;
 }
 
 .results > div.no-results {
@@ -113,6 +114,15 @@ body {
     position: absolute;
     right: .5rem;
     margin-top: .2rem;
+    display: inline-flex;
+}
+
+.bookmark-regular {
+    background: url('./../images/bookmark-regular.svg') no-repeat;
+}
+
+.minus-circle-solid {
+    background: url('./../images/minus-circle-solid.svg') no-repeat;
 }
 
 /* Search component styles */
