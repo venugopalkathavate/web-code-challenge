@@ -99,6 +99,12 @@ body {
     }
 }
 
+@media (min-width: 1680px) {
+    .results > div {
+        flex-basis: 23%;
+    }
+}
+
 /* Favorites styles */
 .fav-icon {
     width: 1rem;
