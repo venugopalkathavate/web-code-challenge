@@ -2,7 +2,7 @@ function renderFav() {
     const html = `
         <div class="content fav-page hide">
             <div class="fav-search-field"></div>
-            <div class="fav-items"></div>
+            <div class="results fav-items"></div>
         </div>
     `;
 
@@ -17,11 +17,11 @@ function onFavSearch(e) {
 
 function renderFavItems() {
     const favItemsHtml = favItems.length ? 
-        (favItems.map(function(item) {
-            return `<div>${item}</div>`
+        (favItems.map(function(item, index) {
+            return renderResultsTemplate(item, false, index);
         })) : (
             `<div>No favorites recipes</div>`
         );
     
-    $('.fav-items').append(favItemsHtml);
+    $('.fav-items').html(favItemsHtml);
 }
