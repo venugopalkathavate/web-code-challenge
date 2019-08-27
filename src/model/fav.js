@@ -1,0 +1,1 @@
+const favItems = ['First Item']

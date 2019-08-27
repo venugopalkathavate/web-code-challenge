@@ -1,0 +1,1 @@
+const searchResults = ['First'];

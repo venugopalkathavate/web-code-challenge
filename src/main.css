@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+}
+
+/* Common Styles */
+.show {
+    display: 'inherit';
+}
+
+.hide {
+    display: none;
+}
+
+.content {
+    padding: 1rem;
+}
+
+/* Navigation styles */
+.navigation {
+    display: flex;
+    color: #ffffff;
+    background-color: #535353;
+}
+
+.navigation > div {
+    padding: 1rem;
+}
+
+.navigation > div.selected {
+    border-bottom: .250rem solid #00a6a6; 
+}
+
+.navigation > div:first-child {
+    background-color: #3e3e3e;
+}
+
+.navigation > div:not(:first-child) {
+    cursor: pointer;
+}
+
+/* Favorites styles */
+.fav-page {
+    /* display: none; */
+}
