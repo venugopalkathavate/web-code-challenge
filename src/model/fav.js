@@ -1,1 +1,1 @@
-const favItems = ['First Item']
+const favItems = [];

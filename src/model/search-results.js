@@ -1,1 +1,6 @@
-const searchResults = ['First'];
+let searchResults = [];
+
+function updateSearchResults(results) {    
+    searchResults = results;
+    renderSearchResults();
+}
