@@ -10,7 +10,7 @@ function renderResultsTemplate(result, showAddToFav, index) {
     const imageClass = showAddToFav ? 'bookmark-regular' : 'minus-circle-solid';
     const thumbnail = result.thumbnail 
         ? `<img src='${result.thumbnail}' alt='${result.title}'>`
-        : `<img src='./../../images/no-image-available.png' alt='${result.title}'>`;
+        : `<img src='./../images/no-image-available.png' alt='${result.title}'>`;
 
     return `
         <div>
