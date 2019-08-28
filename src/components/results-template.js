@@ -16,7 +16,7 @@ function renderResultsTemplate(result, showAddToFav, index) {
         <div>
             ${thumbnail}
             <div class='recipe-details'>
-                <div><a href='${result.href}'>${result.title}</a></div>
+                <div><a href='${result.href}' target="_blank">${result.title}</a></div>
                 <span>Ingredients: ${result.ingredients.split(',').length}</span>
                 <div class='fav-icon ${imageClass}'
                     alt='favorites'

@@ -143,3 +143,34 @@ body {
     outline: none;
     flex-basis: 100%;
 }
+
+.pagination-container.show {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.pagination-container button {
+    padding: .5rem 1.2rem;
+    margin: .1rem;
+    font-size: 1rem;
+    background-color: #009292;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.pagination-container button:disabled {
+    opacity: 0.5;
+}
+
+.pagination-container button:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.pagination-container button:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}

@@ -3,11 +3,13 @@ function renderSearchPage() {
         <div class="content search-page">
             <div class="search-input-container"></div>
             <div class="results search-results"></div>
+            <div class="pagination"></div> 
         </div>
     `;    
 
     $('body').append(html);
     renderSearch('search-input-container', onSearch);
+    renderPagination('pagination');
     renderSearchResults();
 }
 
