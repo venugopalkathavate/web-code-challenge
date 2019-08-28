@@ -161,6 +161,10 @@ body {
     outline: none;
 }
 
+.pagination-container button:active {
+    background-color: #006b6b;
+}
+
 .pagination-container button:disabled {
     opacity: 0.5;
 }
